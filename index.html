@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>360-Degree Tour</title>
+    <meta name="description" content="Hello, WebVR! - A-Frame">
+    <script src="https://aframe.io/releases/0.6.0/aframe.min.js"></script>
+    <script src="app.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <a-assets>
+        <img id="office" class="img-360" src="https://cdn.glitch.com/0ccb4e7f-4cc8-4924-8dc5-734bf5993ff2%2FIMG_4438.jpg?1503790720965"><img>
+        <img id="living" class="img-360" src="https://cdn.glitch.com/0ccb4e7f-4cc8-4924-8dc5-734bf5993ff2%2Foutput%20(1).jpg?1503793982888"><img>
+        <img id="dining" class="img-360" src="https://cdn.glitch.com/0ccb4e7f-4cc8-4924-8dc5-734bf5993ff2%2Foutput.jpg?1503794038019"><img>
+      </a-assets>
+      <a-sky></a-sky>
+      <a-entity position="-2 0 -2" rotation="-10 30 0">
+        <a-text value="Previous" position="0 0.6 0" align="center"></a-text>
+        <a-plane id="previous" previous></a-plane>
+      </a-entity>
+      <a-entity position="2 0 -2" rotation="-10 -30 0">
+        <a-text value="Next" position="0 0.6 0" align="center"></a-text>
+        <a-plane id="next" next></a-plane>
+      </a-entity>
+      <a-camera>
+        <a-cursor></a-cursor>
+      </a-camera>
+    </a-scene>
+  </body>
+</html>
